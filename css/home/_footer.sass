@@ -1,0 +1,97 @@
+.footer
+    padding:
+        top: 90px
+    &__wrapper
+        padding: 0 30px
+        width: 100%
+    &__content
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        h4 
+            margin-bottom: 30px
+            text-transform: uppercase
+            font-weight: 300
+        a 
+            &:hover 
+                color: $red
+        li 
+            line-height: 30px
+    &__service
+        width: 50%
+        ul 
+            columns: 2
+    &__callback
+        text-transform: uppercase
+        color: $main_color
+        cursor: pointer
+    &__phone
+        margin:
+            top: 30px
+            bottom: 30px
+        li 
+            a 
+                color: $text_color
+    &__address
+        border-bottom: 1px solid $blue_gray
+        font-weight: 300
+        transition: all .25s ease-in-out
+        &:hover 
+            border-bottom: 1px solid transparent
+    &__bottom-line
+        margin-top: 90px
+        width: 100%
+        background: $red
+        padding: 20px 0
+    &__bottom-line-wrapper
+        width: 100%
+        padding: 0 30px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        .copy 
+            p 
+                font-size: 14px
+                color: #ffffff
+                margin-bottom: 0
+        .social 
+            ul 
+                position: relative
+                top: -5px
+                li 
+                    display: inline-block
+                    margin-right: 5px
+                    &:last-child
+                        margin-right: 0
+                    a 
+                        color: #ffffff
+
+@media only screen and (max-width : 992px)
+
+    .footer
+        &__service
+            width: auto
+            ul 
+                columns: 1
+
+@media only screen and (max-width : 768px)
+
+    .footer
+        &__content
+            > div 
+                width: 100%
+                margin-top: 50px
+                &:first-child
+                    margin-top: 0
+
+@media only screen and (max-width : 480px)
+
+    .footer
+        &__wrapper
+            padding: 0
+        &__bottom-line-wrapper
+            > div 
+                width: 100%
+                text-align: center
+                &:last-child
+                    margin-top: 20px

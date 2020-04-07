@@ -1,0 +1,102 @@
+.section
+    &__service-wrap
+        display: flex
+        justify-content: space-between
+        width: 100%
+        margin-top: 40px
+    &__links
+        padding: 0 30px
+        width: 100%
+        .items 
+            display: flex
+            flex-wrap: wrap
+            width: 100%
+            > div 
+                width: 25%
+                margin-bottom: 10px
+                a 
+                    display: block
+                    padding: 15px 15px
+                    border-radius: 5px
+                    &:hover 
+                        background: rgba($gray_light, .35)
+                        span, h4
+                            color: $orange
+                    span 
+                        font-size: 45px
+                        color: $orange_dark
+                        transition: color .25s ease-in-out
+                    p
+                        color: $gray
+                        font-size: 14px
+                    h4 
+                        margin:
+                            top: 15px
+                            bottom: 15px
+                        color: $orange_dark
+                        text-transform: uppercase
+                        font-weight: 300
+                        transition: color .25s ease-in-out
+                        font-size: 16px
+        .title-service
+            width: 100%
+            text-align: left
+            padding-left: 15px
+            display: none
+            font-size: 25px
+    &__note
+        margin:
+            top: 50px
+        padding: 0 30px
+        width: 40%
+        h3 
+            margin-bottom: 30px
+            color: $red
+        span 
+            font-weight: 300
+            font-family: 'Roboto', sans-serif
+
+@media only screen and (max-width : 1200px)
+
+    .section
+        &__links
+            .items
+                > div 
+                    width: 33.333%
+
+@media only screen and (max-width : 992px)
+
+    .section
+        &__service-wrap
+            flex-direction: column-reverse
+        &__links
+            padding: 0
+            .items
+                > div 
+                    width: 50%
+                    padding: 15px
+                    margin-bottom: 0
+                    a 
+                        text-align: center
+                        box-shadow: 0 1px 12px rgba(0,0,0,.15)
+                        h4 
+                            text-transform: none
+                            font-weight: 500
+                            font-size: 15px
+                        p 
+                            display: none
+            .title-service
+                display: block
+        &__note
+            padding: 15px
+            width: 100%
+
+@media only screen and (max-width : 768px)
+
+    .section
+        &__links
+            .items
+                > div 
+                    width: 100%
+        &__note
+            width: 100%

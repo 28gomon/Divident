@@ -1,0 +1,50 @@
+.clear-fx
+    clear: both
+ul 
+    margin: 0
+    padding: 0
+    li 
+        list-style: none
+
+.table
+    display: inline-flex
+
+button
+    &:hover, &:active, &:focus
+        outline: none
+
+h1, h2, h3, h4 
+    margin: 0
+
+.f-dent
+    font-family: Flaticon, sans-serif;
+    font-size: 25px
+    // color: #323232
+    // line-height: 93px
+
+a 
+    transition: all .25s ease-in-out
+    &:hover, &:active, &:focus
+        text-decoration: none
+        color: $text_color
+
+.border-bottom
+    border-bottom: 1px solid $gray_light
+.border-top
+    border-top: 1px solid $gray_light
+
+.pb-90
+    padding-bottom: 90px
+.pt-90
+    padding-top: 90px
+.pl-30
+    padding-left: 30px
+.pr-30
+    padding-right: 30px
+
+@media only screen and (max-width : 768px)
+
+    .pb-90
+        padding-bottom: 50px
+    .pt-90
+        padding-top: 50px

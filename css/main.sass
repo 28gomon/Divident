@@ -1,0 +1,344 @@
+$main_color: #8d4851 //#fe5403
+$main_color_light: #9d565e //#ff8500
+$main_color_light_opacity: #ffeed9
+$text_color: #232427
+$gray: #8499a7
+// $gray_light: #edf2f5
+$broun: #8d4851
+$broun_light: #9d565e
+$green: #0ed9d2
+$green_dark: #11bdb7
+
+$font_roboto: 'Roboto', sans-serif
+
+@import vars
+@import reset
+
+body
+	position: relative
+	font-family: $font_roboto
+	font-family: 'Oswald', sans-serif
+	font-size: 16px
+	width: 100%
+	margin: 0 auto
+	color: $text_color
+	background: #ffffff
+
+a
+	color: $blue_gray
+	&:active, &:focus
+		outline: none
+
+p 
+	font-family: $font_roboto
+	a 
+		color: $blue_gray
+
+html.mm-background .mm-page
+	background: #ffffff
+
+.wrapper
+	position: relative
+	background: #ffffff
+		
+.containers
+	width: 100%
+	max-width: 1440px
+	margin: 0 auto
+
+.rows
+	width: 100%
+	margin: 0 auto 
+	padding:
+		left: 30px
+		right: 30px
+
+.header-wrap
+	position: relative
+	z-index: 100
+
+
+.logo-wrap
+	float: left
+	padding-left: 30px
+	width: 300px
+	vertical-align: middle
+	line-height: 87px
+	img
+		width: 100%
+		margin-top: -5px
+
+.top-mnu
+	float: right
+
+.mega-sub
+	margin-bottom: 30px
+	i
+		margin-right: 5px
+
+//SF Base Start
+.sf-menu
+	position: static
+	float: none
+	.sf-mega
+		background-color: #fff
+		padding: 25px 0
+		ul
+			display: block
+			float: none
+			position: relative
+			box-shadow: none
+	li
+		white-space: normal
+		position: static
+	> li
+		> ul
+			width: 220px
+			left: auto
+			li
+				.sf-with-ul::after
+					font-family: "FontAwesome"
+					content: ''
+					right: 1em
+					position: absolute
+
+//SF Base End
+
+.responsive-img
+	width: 100%
+
+//Menu Button
+.toggle-mnu 
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: 14px
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: $main_color
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+//Menu Button End
+
+.toggle-mnu
+	float: right
+	margin-top: 35px
+	margin-right: 30px
+	position: relative
+	z-index: 200
+
+//Custom Styles
+.sf-menu
+	margin-right: 25px
+	a
+		color: #232427
+		background-color: transparent !important
+		border-left: none
+	> li
+		background-color: transparent !important
+		// border-left: #ddd 1px solid
+		&:last-child
+			// border-right: #ddd 1px solid
+		> a
+				padding: 30px 20px
+				border-bottom: 5px solid transparent
+				transition: all .5s ease
+				color: #232427
+				border-left: none
+				border-top: none
+				text-transform: uppercase
+				font-weight: 500
+				&:hover 
+					color: $main_color
+				+ *
+					border-top: $main-color solid 5px
+					a
+						transition: all .25s ease
+						// border-bottom: #ddd 1px solid
+						&:hover
+							color: $main-color
+							background: none !important
+		&:hover
+			> a
+				background-color: #fff
+
+.sf-menu
+	.container-fluid
+		padding-right: 15px!important;
+		padding-left: 15px!important;
+		margin-right: auto!important;
+		margin-left: auto!important;
+	.row
+		margin-right: -15px!important;
+		margin-left: -15px!important;
+	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
+		padding-right: 15px!important;
+		padding-left: 15px!important;
+
+.menu-new-item
+	margin-bottom: 30px
+	h3
+		margin: 15px 0
+	a
+		padding: 0
+		font-size: 18px
+		text-decoration: underline
+		color: $main-color
+	p
+		font-size: 14px
+		color: #666
+
+		
+
+.sf-menu 
+	> li
+		> a
+			+ *
+				.menu-new-item
+					a
+						border-bottom: none
+						&:hover
+							color: #333
+
+.link-list
+	position: relative
+	&::before 
+		content: '\f107'
+		position: absolute
+		right: 0
+		top: 30px
+		font-family: FontAwesome, sans-serif
+		font-size: 16px
+		tansition: all .25s ease-in-out
+
+.sfHover
+	.link-list
+		position: relative
+		color: $main_color
+		&::before 
+			content: '\f106'
+
+.service-list-top-menu
+	columns: 4
+	li 
+		background: #ffffff
+
+@media only screen and (max-width : 1200px)
+
+	.service-list-top-menu
+		columns: 3
+
+@media only screen and (max-width : 992px)
+
+	.service-list-top-menu
+		columns: 1
+
+.sf-menu
+	ul 
+		li 
+			background: #ffffff
+			border-bottom: none
+			a 
+				font-family: $font_roboto
+			&:hover 
+				background: none
+
+.button-1 
+	margin-top: 50px
+	a 
+		color: #ffffff
+		background: $red
+		border-radius: 5px
+		padding: 18px 45px
+		transition: all .25s ease-in-out
+		box-shadow: 0 1px 12px rgba(0,0,0,.15)
+		letter-spacing: 1px
+		&:hover 
+			background: $red_light
+			color: #ffffff
+
+.button-2
+	margin-top: 50px
+	color: #ffffff
+	background: $red
+	border-radius: 5px
+	padding: 18px 45px
+	transition: all .25s ease-in-out
+	letter-spacing: 1px
+	border: none
+	&:hover
+		background: $red_light
+
+@media only screen and (max-width : 480px)
+
+	.button-1 
+		margin-top: 40px
+		a 
+			padding: 15px 22px
+			font-size: 15px
+
+.set-section
+	margin:
+		top: 40px
+		bottom: 40px
+
+.breadcrambs
+	padding: 30px 0
+	ul 
+		li 
+			display: inline-block
+			margin-right: 16px
+			text-transform: uppercase
+			font-size: 12px
+			&:last-child
+				margin-right: 0
+			a
+				font-family: $font_roboto
+				color: #ffffff
+				position: relative 
+				border-bottom: 1px solid transparent
+				&:hover 
+					border-bottom: 1px solid #ffffff
+				&::after 
+					content: '\f105'
+					position: absolute 
+					top: -2px
+					right: -12px
+					font-family: FontAwesome, sans-serif
+			span 
+				color: #ffffff
+				opacity: .75
+				font-family: $font_roboto
+
+@import "top/top"	
+@import "home/home"
+@import "service_detail/_service_deatil"
+@import "callback_phone/_callback-phone"
+@import media

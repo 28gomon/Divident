@@ -1,0 +1,146 @@
+.recorder
+    padding:
+        top: 90px
+        bottom: 90px
+        left: 30px
+        right: 30px
+    border-bottom: 1px solid $gray_light
+    &__section-wrapper
+        display: flex
+        justify-content: space-between
+        width: 100%
+        margin: 0 auto
+        box-shadow: 0 1px 12px rgba(0,0,0,.25)
+        border-radius: 5px
+    &__image
+        width: 40%
+        height: 320px
+        background-size: cover 
+        background-position: top center
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+    &__content
+        display: flex
+        align-items: center
+        position: relative
+        justify-content: center
+        &::before 
+            content: ''
+            position: absolute
+            top: 20px
+            right: 20px
+            width: 68px
+            height: 61px
+            background-image: url('../../assets/image/marker-logo.png')
+            background-size: cover
+            background-position: top center
+        .content-row
+            width: 80%
+            .title-note
+                h3 
+                    color: $red
+                    margin-bottom: 30px
+                p 
+                    color: $blue_gray
+                    font-weight: 300
+.button-phone
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 50px
+    padding-right: 60px
+    .button-1
+        margin-top: 0
+    .phone
+        display: flex
+        position: relative
+        transition: all .25s ease-in-out
+        &:hover 
+            .list-number-down
+                display: block
+        .list-number-down
+            position: absolute
+            top: 35px
+            right: -20px
+            min-width: 180px
+            background: #ffffff
+            text-align: center
+            box-shadow: 0 1px 12px rgba(0,0,0,.15)
+            display: none
+            ul 
+                li 
+                    line-height: 50px
+                    a 
+                        display: block
+                        color: $text_color
+                        &:first-child
+                            border-bottom: 1px solid $gray_light
+        &:hover 
+            cursor: pointer
+        span 
+            max-width: 69px
+            font-size: 11px
+            text-transform: uppercase
+            color: $blue_gray
+            line-height: 12px
+        p.icon
+            font-size: 20px
+            position: relative 
+            &::before 
+                content: '\f107'
+                position: absolute 
+                top: -2px
+                right: -18px 
+                width: 12px
+                height: 12px
+                color: $red
+                font-family: FontAwesome, sans-serif
+            .fa 
+                color: $red
+
+.button-phone
+    .phone.add
+        p.icon 
+            &::before
+                top: 14px
+                transform: rotate(-180deg)
+
+@media only screen and (max-width : 992px)
+
+    .recorder
+        &__image
+            display: none
+        &__content
+            height: 385px
+
+@media only screen and (max-width : 768px)
+
+    .button-phone
+        display: block
+        padding-right: 0
+        .button-1
+            a 
+                padding: 15px 12px
+                font-size: 15px
+        .phone
+            margin-top: 40px
+            .list-number-down
+                right: auto
+                left: 0
+
+@media only screen and (max-width : 480px)
+
+    .button-phone
+        display: block
+        padding-right: 0
+        .button-1
+            a 
+                padding: 15px 12px
+                font-size: 13px
+
+    .recorder
+        padding:
+            left: 0
+            right: 0
+        &__content
+            height: 400px

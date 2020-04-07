@@ -1,0 +1,145 @@
+.inner-presentation
+    position: relative
+    padding-bottom: 90px
+    background-size: cover 
+    background-position: top center
+    &::before 
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: rgba($text_color, .25)
+    &__wrapper
+        width: 100%
+        padding: 0 30px
+        position: relative
+    &__about
+        margin:
+            top: 50px
+            bottom: 50px
+        .title
+            color: #ffffff
+            margin:
+                bottom: 30px
+            width: 50%
+        .description
+            color: #ffffff
+            width: 50%
+            font-weight: 300
+            line-height: 25px
+
+.tizer
+    width: 100%
+    display: table
+    .items
+        width: 100%
+        display: flex
+        justify-content: space-between
+        margin-top: 40px
+        .item
+            color: #ffffff
+            margin:
+                bottom: 30px
+            .fa
+                font-size: 45px
+            span 
+                margin:
+                    top: 30px
+                display: block
+                text-transform: uppercase
+                letter-spacing: 1px
+
+.anchor
+    width: 100%
+    background: $red
+    position: absolute
+    border-top: 2px solid rgba(#ffffff, .15)
+    z-index: 200
+    &__wrapper
+        width: 100%
+        padding: 0 30px
+        .link
+            padding: 30px 0
+            ul 
+                li 
+                    display: inline-block
+                    margin-right: 50px
+                    a
+                        color: #ffffff
+                        font-size: 20px
+                        font-weight: 300
+                        text-transform: uppercase
+                        &:hover 
+                            color: rgba(#ffffff, .75)
+                        &:focus, &:active
+                            color: rgba(#ffffff, 1)
+                        .fa 
+                            padding-right: 10px
+.menu-fixed    
+    position: fixed;
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    z-index: 5
+    transition: all .35s ease-in-out
+    animation-delay: .35s
+    box-shadow: 0 5px 8px rgba($text_color, .25)
+    border-top: none
+    .anchor__wrapper
+        .link
+            padding: 20px 0
+            ul 
+                li 
+                    a 
+                        font-size: 18px
+
+@media only screen and (max-width : 1200px)
+
+    .inner-presentation
+        &__about
+            .title
+                width: 70%
+            .description
+                width: 60%
+
+@media only screen and (max-width : 992px)
+
+    .inner-presentation
+        &__about
+            .title
+                width: 70%
+            .description
+                width: 70%
+
+@media only screen and (max-width : 768px)
+
+    .inner-presentation
+        &__about
+            .title
+                width: 100%
+            .description
+                width: 100%
+
+    .tizer
+        display: none
+
+@media only screen and (max-width : 480px)
+
+    .inner-presentation
+        padding-bottom: 60px
+        &__wrapper
+            padding: 0 0
+
+    .anchor
+        &__wrapper
+            padding: 0 0
+            .link
+                padding: 18px 0
+                ul 
+                    li 
+                        margin-right: 30px
+                        a 
+                            font-size: 16px
